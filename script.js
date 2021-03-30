@@ -33,5 +33,19 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
     }
 });
 
-//In Progress
-weather.fetchWeather("Toronto");
+window.onload = getLocation();
+
+function getLocation() {
+    if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(showPosition); }
+    else { console.log("Geolocation is not supported by this browser."); }
+}
+
+//function to use push user push user location into Location iq api and return city name
+function showPosition(position) {
+    fetch("https://locationiq.com/v1/reverse.php?key=pk.254adf22cf581c7ae167f824a2ca1618&lat="
+        + position.coords.latitude + "&lon=" + position.coords.longitude + "&format=json")
+        .then(response => response.json())
+        .then(data => {
+            weather.fetchWeather(data.address.city);
+        })
+};
