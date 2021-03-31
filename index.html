@@ -13,31 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>WeatherSimple</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <style type="text/css">
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-        #map {
-            height: 100%;
-        }
-
-        main {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            z-index: 2;
-        }
-    </style>
-    <script>
-        let map;
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8,
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -107,9 +82,9 @@
                     </div>
                 </nav>
             </aside>
-            <main class="col px-0 flex-grow-1">
+            <main class="col p-0 flex-grow-1">
                 <div class="container">
-                    <p>hguijhikuhfhgf</p>
+                    <div id="map"></div>
                 </div>
             </main>
         </div>
