@@ -12,9 +12,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>WeatherSimple</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        main {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+        }
+    </script>
 </head>
 
 <body>
+
     <div class="container-fluid">
         <div class="row min-vh-100 d-flex flex-column align-items-stretch flex-md-row">
             <aside class="col-12 col-md-3 col-xl-2 p-0 bg-light flex-shrink-1">
@@ -81,10 +108,8 @@
                 </nav>
             </aside>
             <main class="col px-0 flex-grow-1">
-                <div class="container py-3">
-                    <article>
-                        <h1 class="font-weight-light"></h1>
-                    </article>
+                <div class="container">
+                    <p>hguijhikuhfhgf</p>
                 </div>
             </main>
         </div>
@@ -95,6 +120,10 @@
     <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="script.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_Xy8gjndG9JGOtvzBqrpfZRCrcb9Rsc0&amp;callback=initMap&amp;libraries=&amp;v=weekly"
+        async=""></script>
 </body>
 
 </html>
