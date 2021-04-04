@@ -10,17 +10,19 @@ let weather = {
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
+        const { lat, lon } = data.coord;
         document.querySelector(".city").innerText = "Weather in " + name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = Math.round(temp) + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind speed: " + Math.round(speed) + " km/h";
+        map.setCenter({ lat: lat, lng: lon });
     },
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
 
-    }
+    },
 };
 
 document.querySelector(".search button").addEventListener("click", function () {
@@ -50,14 +52,9 @@ function showPosition(position) {
         })
 };
 
-var long = 33;
-var lat = 1;
-
 let map;
-
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: lat, lng: long },
         zoom: 8,
     });
 }
