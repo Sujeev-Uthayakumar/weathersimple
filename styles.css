@@ -1,5 +1,13 @@
+:root{
+    --primary-color:white;
+    --secondary-color:black;
+}
+.dark-theme{
+    --primary-color:#17263c;
+    --secondary-color:white;
+}
 #circle {
-    border:3px solid black;
+    border:3px solid var(--secondary-color);
     position:inherit;
     width:100px;
     height:100px;
@@ -10,4 +18,11 @@
 }
 #map {
     height: 100%;
+}
+aside{
+    background-color:var(--primary-color);;
+    color:var(--secondary-color);;
+}
+button.accordion-button{
+    color:var(--secondary-color);;
 }

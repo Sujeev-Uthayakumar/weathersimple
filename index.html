@@ -19,8 +19,8 @@
 
     <div class="container-fluid">
         <div class="row min-vh-100 d-flex flex-column align-items-stretch flex-md-row">
-            <aside class="col-12 col-md-3 col-xl-2 p-0 bg-light flex-shrink-1">
-                <nav class="navbar navbar-expand-md navbar-light bd-light flex-md-column flex-row align-items-center py-1 text-center sticky-top"
+            <aside class="col-12 col-md-3 col-xl-2 p-0 flex-shrink-1">
+                <nav class="navbar navbar-expand-md navbar-light flex-md-column flex-row align-items-center py-1 text-center sticky-top"
                     id="sidebar">
                     <div class="p-2 d-flex align-items-center">
                         <i class="fas fa-cloud"></i>
@@ -46,9 +46,8 @@
                                         <div class="accordion-body">
                                             <div
                                                 class="toggle-dark form-check form-switch d-flex justify-content-between">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckChecked" checked>
-                                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                                <input class="form-check-input" type="checkbox" id="darktoggle" check>
+                                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
                                                 <a href="https://openweathermap.org/api"><i
                                                         class="far fa-question-circle"></i></a>
                                             </div>
@@ -93,6 +92,16 @@
     <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        var darkMode = document.getElementById("darktoggle");
+
+        darkMode.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+
+        }
+    </script>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_Xy8gjndG9JGOtvzBqrpfZRCrcb9Rsc0&amp;callback=initMap&amp;libraries=&amp;v=weekly"
