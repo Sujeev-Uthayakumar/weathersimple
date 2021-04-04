@@ -50,11 +50,14 @@ function showPosition(position) {
         })
 };
 
+var long = 33;
+var lat = 1;
+
 let map;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
+        center: { lat: lat, lng: long },
         zoom: 8,
     });
 }

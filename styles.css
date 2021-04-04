@@ -20,9 +20,12 @@
     height: 100%;
 }
 aside{
-    background-color:var(--primary-color);;
-    color:var(--secondary-color);;
+    background-color:var(--primary-color);
+    color:var(--secondary-color);
 }
 button.accordion-button{
-    color:var(--secondary-color);;
+    color:var(--secondary-color);
 }
+.navbar-toggler-icon{
+    border: rgb(255,102,203);
+  } 
