@@ -1,0 +1,31 @@
+:root{
+    --primary-color:white;
+    --secondary-color:black;
+}
+.dark-theme{
+    --primary-color:#17263c;
+    --secondary-color:white;
+}
+#circle {
+    border:3px solid var(--secondary-color);
+    position:inherit;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+#map {
+    height: 100%;
+}
+aside{
+    background-color:var(--primary-color);
+    color:var(--secondary-color);
+}
+button.accordion-button{
+    color:var(--secondary-color);
+}
+.navbar-toggler-icon{
+    border: rgb(255,102,203);
+  } 
